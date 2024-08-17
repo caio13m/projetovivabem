@@ -1,18 +1,8 @@
-const maises = document.querySelectorAll(".mais")
+const desc = document.querySelector(".desc p")
 
-for(const mais of maises){
+const limite = document.body.getBoundingClientRect();
+console.log(limite.width*0.1)
 
-    mais.addEventListener("click",(e) => 
-    {
-        console.log(mais)
-
-    });
-
-    
-
-
-
-
-
-
+if (desc.textContent.length > limite) {
+    desc.textContent = desc.textContent.substring(0, limite.width*0.1);
 }
